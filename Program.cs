@@ -9,7 +9,7 @@ namespace Weekly_Coding_10_04
             bool result = true;
             int height = grid.GetLength(0);
             int width = grid.GetLength(1);
-            for (int x = 0; result && x < height; x++)
+            for (int x = 0; result && x < height - 1; x++)
             {
                 for (int y = 0; result && y < width; y++)
                 {
@@ -22,7 +22,7 @@ namespace Weekly_Coding_10_04
                             if (result && y - 1 >= 0)
                                 result = grid[x + 2, y - 1] == 0;
                         }
-                        if (result && x + 1 < height)
+                        if (result)
                         {
                             if (y + 2 < width)
                                 result = grid[x + 1, y + 2] == 0;
